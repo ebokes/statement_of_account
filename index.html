@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       @font-face {
         font-family: Proxima Nova;
         src: url(./Proxima\ Nova\ Font.otf) format("opentype");
@@ -20,6 +26,88 @@
         src: url(./Proxima\ Nova\ Bold.otf) format("opentype");
         font-weight: 700;
       }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      @media screen and (max-width: 768px) {
+        html {
+          font-size: 56%;
+        }
+
+        header {
+          padding: 1rem;
+        }
+
+        nav {
+          flex-direction: column;
+          margin: 0 auto;
+          padding-bottom: 1rem;
+        }
+
+        header {
+          justify-content: space-evenly;
+        }
+
+        .row1 {
+          flex-direction: column;
+        }
+
+        .row2 {
+          flex-direction: column;
+        }
+
+        .col1 {
+          width: 100%;
+        }
+
+        .col2 {
+          width: 100%;
+          margin-top: 5rem;
+        }
+        .col4 {
+          margin-top: 1rem;
+        }
+      }
+
+      @media print {
+        html {
+          font-size: 53%;
+        }
+
+        .row1 {
+          flex-direction: row;
+        }
+
+        .row2 {
+          /* width: 90%;
+          display: flex;
+          justify-content: space-between; */
+        }
+
+        .col2 {
+          margin-top: 0;
+        }
+
+        .col4 {
+          margin-top: 0;
+        }
+      }
+
+      /* @media screen and (max-width: 960px) {
+        html {
+          font-size: 57%;
+        }
+      } */
+      @media screen and (max-width: 1064px) {
+        .row2 {
+          flex-wrap: wrap;
+        }
+        .col5 {
+          margin-top: 1rem;
+        }
+      }
     </style>
     <title>Statement of Account</title>
   </head>
@@ -28,48 +116,68 @@
       margin: 0;
       padding: 0;
       color: #081434;
+      font-size: 1.6rem;
       font-family: Proxima Nova, sans-serif;
     "
   >
     <div style="width: 100%; margin: 0 auto">
-      <header style="background: #143284; height: 113px">
+      <header style="background: #143284">
         <nav
           style="
             display: flex;
             justify-content: space-between;
             color: #fff;
             align-items: center;
-            height: 100%;
+            height: 9rem;
             width: 90%;
             margin: 0 auto;
+            max-width: 144rem;
           "
         >
-          <div>
-            <img src="./logo.svg" alt="halo-logo" style="width: 93px" />
-          </div>
-          <p style="font-weight: 700; font-size: 24px">Statement of Accounts</p>
+          <!-- <div style="display: flex; justify-content: space-between"> -->
+          <img
+            src="./logo.svg"
+            alt="halo-logo"
+            style="width: 8rem; margin-right: 2rem"
+          />
+          <!-- </div> -->
+          <p
+            class="statement"
+            style="
+              display: flex;
+              align-self: center;
+              font-weight: 700;
+              font-size: 2.4rem;
+              white-space: nowrap;
+              color: #fff;
+              margin-top: 1.5rem;
+            "
+          >
+            Statement of Accounts
+          </p>
         </nav>
       </header>
       <!-- section -->
-      <section style="width: 1440px; margin: 0 auto; width: 90%">
+      <section style="max-width: 144rem; margin: 0 auto; width: 90%">
         <div
+          class="row1"
           style="
             display: flex;
             justify-content: space-between;
-            margin-top: 48px;
+            margin-top: 4.8rem;
           "
         >
-          <div style="width: 282px">
-            <p style="font-size: 14px; margin: 0">Customer Details</p>
-            <h2 style="margin: 11px 0">Azeez Habeeb Omobolaji</h2>
-            <p style="margin: 0 0 12px 0; line-height: 24px">
+          <div class="col1" style="width: 28.2rem">
+            <p style="font-size: 1.4rem; margin: 0">Customer Details</p>
+            <h2 style="margin: 1.1rem 0">Azeez Habeeb Omobolaji</h2>
+            <p style="margin: 0 0 1.2rem 0; line-height: 2.4rem">
               23, Adewunmi street, Meiran, Alimosho, Lagos State, Nigeria.
             </p>
             <p style="margin: 0">
               Account Number : <span style="font-weight: 600">0228895944</span>
             </p>
           </div>
-          <div style="width: 331px">
+          <div class="col2" style="width: 33.1rem">
             <p style="margin: 0">
               Date:
               <span style="font-weight: 600">01/07/2022 - 03/08/2022</span>
@@ -78,9 +186,8 @@
               style="
                 font-weight: 600;
                 background: #edf7fe;
-                padding: 11px 0 11px 12px;
-                margin: 16px 0;
-                /* font-family: Proxima Nova, sans-serif; */
+                padding: 1.1rem 0 1.1rem 1.2rem;
+                margin: 1.6rem 0;
               "
             >
               Account Summary
@@ -88,13 +195,13 @@
             <div style="display: flex; justify-content: space-between">
               <div>
                 <p style="margin: 0">Opening Balance</p>
-                <p style="font-weight: 600; margin: 12px 0 0 0">
+                <p style="font-weight: 600; margin: 1.2rem 0 0 0">
                   ₦2,000,001.75
                 </p>
               </div>
               <div style="text-align: right">
                 <p style="margin: 0">Closing Balance</p>
-                <p style="font-weight: 600; margin: 12px 0 0 0">
+                <p style="font-weight: 600; margin: 1.2rem 0 0 0">
                   ₦1,030,001.75
                 </p>
               </div>
@@ -102,200 +209,330 @@
           </div>
         </div>
         <div
+          class="row2"
           style="
             display: flex;
-            margin-bottom: 32px;
-            margin-top: 37px;
-            border-top: 1px solid #e7e7e7;
-            border-bottom: 1px solid #e7e7e7;
+            /* flex-wrap: wrap; */
+            margin-bottom: 3.2rem;
+            margin-top: 3.7rem;
+            border-top: 0.1rem solid #e7e7e7;
+            border-bottom: 0.1rem solid #e7e7e7;
             width: 100%;
+            padding: 1.4rem 0;
+            max-width: 100%;
           "
         >
-          <p>
+          <!-- <div
+            style="
+              @media (max-width: 76.8rem) {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+              }
+            "
+          > -->
+          <p class="col3" style="white-space: nowrap; margin-right: 9.3rem">
             Money Paid In:
-            <span style="font-weight: 700; margin-right: 93px; color: #27ae60"
-              >₦2,000,001.75</span
-            >
+            <span style="font-weight: 700; color: #27ae60">₦2,000,001.75</span>
           </p>
-          <p>
+          <p class="col4" style="white-space: nowrap; margin-right: 9.3rem">
             Money Paid Out:
-            <span style="font-weight: 700; margin-right: 93px; color: #eb5757"
-              >₦1,234,401.42</span
-            >
+            <span style="font-weight: 700; color: #eb5757">₦1,234,401.42</span>
           </p>
-          <p>
+          <!-- </div> -->
+          <p class="col5" style="white-space: nowrap">
             Account Balance as at 02/08/2022:
             <span style="font-weight: 700">₦40,331.81</span>
           </p>
         </div>
-        <div>
+        <div style="overflow-x: auto">
           <!-- Table -->
           <table cellspacing="0" style="width: 100%">
             <thead style="background: #edf7fe; font-weight: 600">
-              <tr style="height: 40px">
-                <th style="text-align: left; font-weight: 600">
-                  Transaction Date
-                </th>
-                <th style="text-align: left; font-weight: 600">Category</th>
-                <th style="text-align: left; font-weight: 600">Money In</th>
-                <th style="text-align: left; font-weight: 600">Money Out</th>
+              <tr style="height: 4rem">
                 <th
                   style="
                     text-align: left;
                     font-weight: 600;
-                    width: 380px;
-                    /* padding-right: 76px; */
+                    padding: 0 0.6rem;
+                    white-space: nowrap;
+                  "
+                >
+                  Transaction Date
+                </th>
+                <th
+                  style="text-align: left; font-weight: 600; padding: 0 0.6rem"
+                >
+                  Category
+                </th>
+                <th
+                  style="
+                    text-align: left;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    padding: 0 0.6rem;
+                  "
+                >
+                  Money In
+                </th>
+                <th
+                  style="
+                    text-align: left;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    padding: 0 0.6rem;
+                  "
+                >
+                  Money Out
+                </th>
+                <th
+                  style="
+                    text-align: left;
+                    font-weight: 600;
+                    width: 38rem;
+                    padding: 0 0.6rem;
+                    /* padding-right: 7.6rem; */
                   "
                 >
                   Description
                 </th>
-                <th style="text-align: left; font-weight: 600">Balance</th>
+                <th
+                  style="text-align: left; font-weight: 600; padding: 0 0.6rem"
+                >
+                  Balance
+                </th>
               </tr>
             </thead>
             <tbody>
               <!-- 1 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Transfer</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Transfer</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="font-weight: 600; color: #eb5757; padding: 0 0.6rem">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   TRF-NIP FRM EBENEZER BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="font-weight: 600; padding: 0 0.6rem">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 2 -->
 
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Savings</td>
-                <td style="font-weight: 600; color: #27ae60">₦40,331.81</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Savings</td>
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                  ₦40,331.81
+                </td>
                 <td></td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   SAVINGS- PLAN NAME DESCRIPTION 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 3 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Investments</td>
-                <td style="font-weight: 600; color: #27ae60">₦40,331.81</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Investments</td>
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                  ₦40,331.81
+                </td>
                 <td></td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   INVESTMENTS -PLAN NAME DESCRIPTION 26253792826273967
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 4 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Bills Payment</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem; white-space: nowrap">
+                  Bills Payment
+                </td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   DSTV PAYMENTS-NIP FRM BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 5 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Airtime Purchase</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Airtime Purchase</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   MTN PURCHASE 08147948832 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 6 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Transfer</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Transfer</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   TRF-NIP FRM EBENEZER BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 7 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Bills Payment</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem; white-space: nowrap">
+                  Bills Payment
+                </td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   DSTV PAYMENTS-NIP FRM BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 8 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Airtime Purchase</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Airtime Purchase</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   MTN PURCHASE 08147948832 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 9 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Investments</td>
-                <td style="font-weight: 600; color: #27ae60">₦40,331.81</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Investments</td>
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                  ₦40,331.81
+                </td>
                 <td></td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   INVESTMENTS -PLAN NAME DESCRIPTION 26253792826273967
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 10 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Savings</td>
-                <td style="font-weight: 600; color: #27ae60">₦40,331.81</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Savings</td>
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                  ₦40,331.81
+                </td>
                 <td></td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   SAVINGS- PLAN NAME DESCRIPTION 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 11 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Bills Payment</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem; white-space: nowrap">
+                  Bills Payment
+                </td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   DSTV PAYMENTS-NIP FRM BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 12 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Transfer</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem">Transfer</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   TRF-NIP FRM EBENEZER BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
               <!-- 13 -->
-              <tr style="height: 70px">
-                <td>01/07/2022</td>
-                <td>Bills Payment</td>
+              <tr style="height: 7rem">
+                <td style="padding: 0 0.6rem">01/07/2022</td>
+                <td style="padding: 0 0.6rem; white-space: nowrap">
+                  Bills Payment
+                </td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757">₦40,331.81</td>
-                <td style="padding-top: 24px; line-height: 24px">
+                <td style="padding: 0 0.6rem; font-weight: 600; color: #eb5757">
+                  ₦40,331.81
+                </td>
+                <td
+                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                >
                   DSTV PAYMENTS-NIP FRM BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600">₦2,000,001.75</td>
+                <td style="padding: 0 0.6rem; font-weight: 600">
+                  ₦2,000,001.75
+                </td>
               </tr>
             </tbody>
           </table>

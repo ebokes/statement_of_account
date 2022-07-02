@@ -73,7 +73,7 @@
 
       @media print {
         html {
-          font-size: 53%;
+          font-size: 48%;
         }
 
         .row1 {
@@ -81,9 +81,10 @@
         }
 
         .row2 {
-          /* width: 90%;
+          width: 90%;
           display: flex;
-          justify-content: space-between; */
+          flex-direction: column;
+          /* justify-content: space-between; */
         }
 
         .col2 {
@@ -212,7 +213,6 @@
           class="row2"
           style="
             display: flex;
-            /* flex-wrap: wrap; */
             margin-bottom: 3.2rem;
             margin-top: 3.7rem;
             border-top: 0.1rem solid #e7e7e7;
@@ -270,7 +270,7 @@
                     text-align: left;
                     font-weight: 600;
                     white-space: nowrap;
-                    padding: 0 0.6rem;
+                    padding: 0 1rem;
                   "
                 >
                   Money In
@@ -280,7 +280,7 @@
                     text-align: left;
                     font-weight: 600;
                     white-space: nowrap;
-                    padding: 0 0.6rem;
+                    padding: 0 1rem;
                   "
                 >
                   Money Out
@@ -289,16 +289,14 @@
                   style="
                     text-align: left;
                     font-weight: 600;
-                    width: 38rem;
-                    padding: 0 0.6rem;
+                    width: 34rem;
+                    padding: 0 1rem;
                     /* padding-right: 7.6rem; */
                   "
                 >
                   Description
                 </th>
-                <th
-                  style="text-align: left; font-weight: 600; padding: 0 0.6rem"
-                >
+                <th style="text-align: left; font-weight: 600; padding: 0 1rem">
                   Balance
                 </th>
               </tr>
@@ -309,52 +307,47 @@
                 <td style="padding: 0 0.6rem">01/07/2022</td>
                 <td style="padding: 0 0.6rem">Transfer</td>
                 <td></td>
-                <td style="font-weight: 600; color: #eb5757; padding: 0 0.6rem">
+                <td style="font-weight: 600; color: #eb5757; padding: 0 1rem">
                   ₦40,331.81
                 </td>
                 <td
-                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
+                  style="
+                    padding: 2.4rem 1rem 0 1rem;
+                    line-height: 2.4rem;
+                    /* width: 40rem; */
+                  "
                 >
                   TRF-NIP FRM EBENEZER BABALOLA 02837839736627928262537928262
                 </td>
-                <td style="font-weight: 600; padding: 0 0.6rem">
-                  ₦2,000,001.75
-                </td>
+                <td style="font-weight: 600; padding: 0 1rem">₦2,000,001.75</td>
               </tr>
               <!-- 2 -->
 
               <tr style="height: 7rem">
                 <td style="padding: 0 0.6rem">01/07/2022</td>
                 <td style="padding: 0 0.6rem">Savings</td>
-                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                <td style="padding: 0 1rem; font-weight: 600; color: #27ae60">
                   ₦40,331.81
                 </td>
                 <td></td>
-                <td
-                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
-                >
+                <td style="padding: 2.4rem 1rem 0 1rem; line-height: 2.4rem">
                   SAVINGS- PLAN NAME DESCRIPTION 02837839736627928262537928262
                 </td>
-                <td style="padding: 0 0.6rem; font-weight: 600">
-                  ₦2,000,001.75
-                </td>
+                <td style="padding: 0 1rem; font-weight: 600">₦2,000,001.75</td>
               </tr>
               <!-- 3 -->
               <tr style="height: 7rem">
                 <td style="padding: 0 0.6rem">01/07/2022</td>
                 <td style="padding: 0 0.6rem">Investments</td>
-                <td style="padding: 0 0.6rem; font-weight: 600; color: #27ae60">
+                <td style="padding: 0 1rem; font-weight: 600; color: #27ae60">
                   ₦40,331.81
                 </td>
                 <td></td>
-                <td
-                  style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
-                >
-                  INVESTMENTS -PLAN NAME DESCRIPTION 26253792826273967
+                <td style="padding: 2.4rem 1rem 0 1rem; line-height: 2.4rem">
+                  INVESTMENTS -PLAN NAME <br />
+                  DESCRIPTION 26253792826273967
                 </td>
-                <td style="padding: 0 0.6rem; font-weight: 600">
-                  ₦2,000,001.75
-                </td>
+                <td style="padding: 0 1rem; font-weight: 600">₦2,000,001.75</td>
               </tr>
               <!-- 4 -->
               <tr style="height: 7rem">
@@ -456,7 +449,8 @@
                 <td
                   style="padding: 2.4rem 0.6rem 0 0.6rem; line-height: 2.4rem"
                 >
-                  INVESTMENTS -PLAN NAME DESCRIPTION 26253792826273967
+                  INVESTMENTS -PLAN NAME <br />
+                  DESCRIPTION 26253792826273967
                 </td>
                 <td style="padding: 0 0.6rem; font-weight: 600">
                   ₦2,000,001.75

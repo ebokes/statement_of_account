@@ -41,6 +41,7 @@
         }
 
         nav {
+          width: 95%;
           flex-direction: column;
           margin: 0 auto;
           padding-bottom: 1rem;
@@ -48,6 +49,10 @@
 
         header {
           justify-content: space-evenly;
+        }
+
+        section {
+          width: 95%;
         }
 
         .row1 {
@@ -58,16 +63,15 @@
           flex-direction: column;
         }
 
-        .col1 {
-          width: 100%;
-        }
-
         .col2 {
           width: 100%;
           margin-top: 5rem;
         }
         .col4 {
           margin-top: 1rem;
+        }
+        .opening-balance {
+          margin-right: 0;
         }
       }
 
@@ -100,12 +104,26 @@
           font-size: 57%;
         }
       }
+
       @media screen and (max-width: 1064px) {
         .row2 {
           flex-wrap: wrap;
         }
         .col5 {
           margin-top: 1rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        section {
+          width: 90%;
+        }
+
+        .col1 {
+          width: 28.2rem;
+        }
+        .opening-balance {
+          margin-right: 10rem;
         }
       }
     </style>
@@ -156,7 +174,7 @@
         </nav>
       </header>
       <!-- section -->
-      <section style="max-width: 144rem; margin: 0 auto; width: 90%">
+      <section style="max-width: 144rem; margin: 0 auto">
         <div
           class="row1"
           style="
@@ -165,7 +183,7 @@
             margin-top: 4.8rem;
           "
         >
-          <div class="col1" style="width: 28.2rem">
+          <div class="col1">
             <p style="font-size: 1.4rem; margin: 0">Customer Details</p>
             <h2 style="margin: 1.1rem 0">Azeez Habeeb Omobolaji</h2>
             <p style="margin: 0 0 1.2rem 0; line-height: 2.4rem">
@@ -175,7 +193,7 @@
               Account Number : <span style="font-weight: 600">0228895944</span>
             </p>
           </div>
-          <div class="col2" style="width: 33.1rem">
+          <div class="col2">
             <p style="margin: 0">
               Date:
               <span style="font-weight: 600">01/07/2022 - 03/08/2022</span>
@@ -191,14 +209,14 @@
               Account Summary
             </p>
             <div style="display: flex; justify-content: space-between">
-              <div>
-                <p style="margin: 0">Opening Balance</p>
+              <div class="opening-balance">
+                <p style="margin: 0; white-space: nowrap">Opening Balance</p>
                 <p style="font-weight: 600; margin: 1.2rem 0 0 0">
                   ₦2,000,001.75
                 </p>
               </div>
               <div style="text-align: right">
-                <p style="margin: 0">Closing Balance</p>
+                <p style="margin: 0; white-space: nowrap">Closing Balance</p>
                 <p style="font-weight: 600; margin: 1.2rem 0 0 0">
                   ₦1,030,001.75
                 </p>
